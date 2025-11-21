@@ -1,0 +1,183 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9A3F3F;
+  padding: 15px 30px;
+  border-bottom: 5px solid #b45f5f;
+}
+
+.logo {
+  font-weight: bold;
+  font-size:20px;
+  color: #E6CFA9;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #f4f4d7;
+  border-radius:5px;
+  font-weight: bold;
+}
+
+.navbar .user-info {
+  display: flex;
+  color: #fffffe;
+  align-items: center;
+  gap: 10px;
+}
+.navbar nav ul li a:hover {
+
+  color: #3E0703; /* change text color */
+  transition: 0.3s ease; /* smooth effect */
+}
+
+.avatar {
+  background: #c67777;
+  color: white;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-btn {
+  background-color: #e53939;  /* Deep red to match your barangay system theme */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:hover {
+  background-color: #762b2b; /* Lighter red on hover */
+  transform: scale(1.05);
+}
+
+.logout-btn:active {
+  background-color: #7d2d2d;
+  transform: scale(0.98);
+}
+/* ===== Main Content ===== */
+/* ===== Main Content ===== */
+.content {
+  width: 100%;
+  max-width: 700px;
+  background: #ece6e6;
+  margin: 80px auto; /* pushes it below navbar + centers horizontally */
+  padding: 30px 40px;
+  border-radius: 12px;
+  border: 3px solid #7e5858;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+
+/* ===== Form Labels ===== */
+form label {
+  display: block;
+  margin-top: 12px;
+  color: #3c1d1d;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+/* ===== Input & Select Fields ===== */
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #421c1c;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #9a3f3f;
+  box-shadow: 0 0 4px rgba(154, 63, 63, 0.3);
+  outline: none;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.btn.primary {
+  background-color: #9a3f3f;
+  color: white;
+  border: none;
+}
+
+.btn.primary:hover {
+  background-color: #7e2f2f;
+}
+
+.btn.outline {
+  background: none;
+  border: 2px solid #9a3f3f;
+  color: #9a3f3f;
+}
+
+.btn.outline:hover {
+  background-color: #9a3f3f;
+  color: white;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  .content {
+    padding: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

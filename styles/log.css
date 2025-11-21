@@ -1,0 +1,73 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+ background-image: url('../images/ba.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* moves container to the right */
+  
+  align-items: center;       /* keeps it vertically centered */
+  padding-right:20%;
+  height: 100vh;
+
+/* Container */
+.login-container {
+  background: #84524d;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgb(22 24 78);
+  width: 350px;
+  text-align: center;
+}
+
+/* Title */
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Labels */
+label {
+  color:white;
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Inputs */
+input, select {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 80px;
+  border: 2px solid #d87355;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus, select:focus {
+  border-color: #d1b18d;
+}
+
+/* Button */
+.login-btn {
+  width: 70%;
+  padding: 10px;
+  background: #d1b18d;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #994025;
+}
+}

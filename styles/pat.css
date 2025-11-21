@@ -1,0 +1,939 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9A3F3F;
+  padding: 15px 30px;
+  border-bottom: 5px solid #b45f5f;
+}
+
+.logo {
+  font-weight: bold;
+  font-size:20px;
+  color: #E6CFA9;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #f4f4d7;
+  border-radius:5px;
+  font-weight: bold;
+}
+.navbar nav ul li a:hover {
+
+  color: #3E0703; /* change text color */
+  transition: 0.3s ease; /* smooth effect */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #faf7f1;
+  padding: 8px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgb(134 73 73 / 10%);
+  font-family: Arial, sans-serif;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.user-info:hover {
+  background: #f6dede;
+  transform: scale(1.02);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #9A3F3F; /* matches your barangay theme */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.user-info span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+  .user-info {
+    padding: 6px 10px;
+    gap: 8px;
+  }
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .user-info span {
+    font-size: 14px;
+  }
+}
+
+.logout-btn {
+  background-color: #e53939;  /* Deep red to match your barangay system theme */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:hover {
+  background-color: #762b2b; /* Lighter red on hover */
+  transform: scale(1.05);
+}
+
+.logout-btn:active {
+  background-color: #7d2d2d;
+  transform: scale(0.98);
+}
+/* ================= PAGE CONTENT ================= */
+.content {
+  padding: 20px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+/* Page Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 25px;
+  color: #393939;
+}
+
+.page-header .muted {
+  font-size: 18px;
+  color: #322f2f;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.primary {
+  background: #acc8b8;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #3a6c4f;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #27ae60;
+}
+
+.btn.outline:hover {
+  background: #27ae60;
+  color: #fff;
+}
+
+.btn.small {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* Search & Filters */
+.search-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  
+  gap: 12px;
+}
+
+.search-row input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 5px solid #3e2121;
+  font-size: 13px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filters select {
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 2px solid #2b2626;
+  font-size: 13px;
+}
+
+/* --- Action Icons Cell --- */
+.action-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* --- Links inside --- */
+.action-icons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+ font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* --- Individual Button Colors --- */
+.action-icons .view {
+   background-color: #f6efcf;
+  color: #0077b6;
+  border: 1px solid #f1c40f;
+}
+
+.action-icons .edit {
+   background-color: #f0f9ff;
+  color: #0077b6;
+  border: 1px solid #90e0ef;
+}
+
+.action-icons .delete {
+  background-color: #fff5f5;
+  color: #d90429;
+  border: 1px solid #f87171;
+}
+
+/* --- Hover Effects --- */
+.action-icons .view:hover {
+   background-color: #f0c228;
+  color: white;
+  transform: scale(1.05);
+}
+
+.action-icons .edit:hover {
+  background-color: #0077b6;
+  color: white;
+  transform: scale(1.05);
+}
+
+.action-icons .delete:hover {
+ background-color: #d90429;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Table */
+.table-card {
+  width: 90%;
+  margin: 0 auto; /* ✅ centers horizontally */
+  background: #ece7e7;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 3px solid #5e2f2f;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.table-header {
+  margin-bottom: 10px;
+}
+
+.table-header h3 {
+  font-size: 20px;
+  color: #000000;
+}
+
+.patient-table {
+  width: 100%;
+  margin:0 auto;
+  border-collapse: collapse;
+}
+
+.patient-table th,
+.patient-table td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 2px solid #6b2323;
+  font-size: 1rem;
+}
+
+
+.patient-table th {
+ background:#915c5c;
+  color: #ffebeb;
+  font-weight: bold;
+  font-size:18px;
+}
+.patient-table tr:hover {
+  background: #decbbf;
+}
+
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* dimmed background */
+  backdrop-filter: blur(3px);
+}
+
+/* Modal Box */
+.modal-content {
+  background: #f9f5f0;
+  width: 40%;
+  margin: 5% auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+  overflow: hidden;
+}
+
+/* Header */
+.modal-header {
+  background: #9A3F3F;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #b45f5f;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.close:hover {
+  color: #E6CFA9;
+}
+
+/* Modal Body */
+.modal-body {
+  background:#f9f7f7;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-body label {
+  font-weight: bold;
+  color: #4a3c3c;
+}
+
+.modal-body input,
+.modal-body select {
+  padding: 10px;
+  border: 2px solid #180f0f;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.modal-body input:focus,
+.modal-body select:focus {
+  
+  border-color: #3c1d1d;
+  box-shadow: 0 0 5px rgba(154, 63, 63, 0.4);
+}
+
+/* Modal Footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #9a3f3f;
+  border-top: 2px solid #281616;
+}
+
+.btn {
+  background:#ddb7a2;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn.cancel {
+  background: #f6f6f6;
+  color: #6c1e1e;
+}
+
+.btn.cancel:hover {
+  background: #d04646;
+}
+
+.btn.green {
+  background: #9A3F3F;
+  color: #fff;
+}
+
+.btn.green:hover {
+  background: #538d58;
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9A3F3F;
+  padding: 15px 30px;
+  border-bottom: 5px solid #b45f5f;
+}
+
+.logo {
+  font-weight: bold;
+  font-size:20px;
+  color: #E6CFA9;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #f4f4d7;
+  border-radius:5px;
+  font-weight: bold;
+}
+
+.navbar nav ul li a.active {
+  color: #9a3f3f;
+  background: #f2ebe0;
+  border-radius: 30px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+
+  color: #3E0703; /* change text color */
+  transition: 0.3s ease; /* smooth effect */
+}
+
+
+
+.logout-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #e74c3c;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+/* ================= PAGE CONTENT ================= */
+.content {
+  padding: 20px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+/* Page Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 25px;
+  color: #393939;
+}
+
+.page-header .muted {
+  font-size: 18px;
+  color: #322f2f;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.primary {
+  background: #acc8b8;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #3a6c4f;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #27ae60;
+}
+
+.btn.outline:hover {
+  background: #27ae60;
+  color: #fff;
+}
+
+.btn.small {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* Search & Filters */
+.search-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  
+  gap: 12px;
+}
+
+.search-row input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 5px solid #3e2121;
+  font-size: 13px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filters select {
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 2px solid #2b2626;
+  font-size: 13px;
+}
+
+/* --- Action Icons Cell --- */
+.action-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* --- Links inside --- */
+.action-icons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+ font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* --- Individual Button Colors --- */
+.action-icons .view {
+   background-color: #f6efcf;
+  color: #0077b6;
+  border: 1px solid #f1c40f;
+}
+
+.action-icons .edit {
+   background-color: #f0f9ff;
+  color: #0077b6;
+  border: 1px solid #90e0ef;
+}
+
+.action-icons .delete {
+  background-color: #fff5f5;
+  color: #d90429;
+  border: 1px solid #f87171;
+}
+
+/* --- Hover Effects --- */
+.action-icons .view:hover {
+   background-color: #f0c228;
+  color: white;
+  transform: scale(1.05);
+}
+
+.action-icons .edit:hover {
+  background-color: #0077b6;
+  color: white;
+  transform: scale(1.05);
+}
+
+.action-icons .delete:hover {
+ background-color: #d90429;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Table */
+.table-card {
+  width: 90%;
+  margin: 0 auto; /* ✅ centers horizontally */
+  background: #ece7e7;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 3px solid #5e2f2f;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.table-header {
+  margin-bottom: 10px;
+}
+
+.table-header h3 {
+  font-size: 20px;
+  color: #000000;
+}
+
+.patient-table {
+  width: 100%;
+  margin:0 auto;
+  border-collapse: collapse;
+}
+
+.patient-table th,
+.patient-table td {
+  padding: 0.8rem;
+  text-align: center;
+  border-bottom: 2px solid #6b2323;
+  font-size: 1rem;
+}
+
+
+.patient-table th {
+ background:#915c5c;
+  color: #ffebeb;
+  font-weight: bold;
+  font-size:18px;
+}
+.patient-table tr:hover {
+  background: #decbbf;
+}
+
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* dimmed background */
+  backdrop-filter: blur(3px);
+}
+
+/* Modal Box */
+.modal-content {
+  background: #f9f5f0;
+  width: 40%;
+  margin: 5% auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+  overflow: hidden;
+}
+
+/* Header */
+.modal-header {
+  background: #9A3F3F;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #b45f5f;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.close:hover {
+  color: #E6CFA9;
+}
+
+/* Modal Body */
+.modal-body {
+  background:#f9f7f7;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-body label {
+  font-weight: bold;
+  color: #312c2c;
+}
+
+.modal-body input,
+.modal-body select {
+  padding: 10px;
+  border: 2px solid #9a3f3f;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.modal-body input:focus,
+.modal-body select:focus {
+  
+  border-color: #3c1d1d;
+  box-shadow: 0 0 5px rgba(154, 63, 63, 0.4);
+}
+
+/* Modal Footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #9a3f3f;
+  border-top: 2px solid #281616;
+}
+
+.btn {
+  background:#ddb7a2;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn.cancel {
+  background: #f6f6f6;
+  color: #6c1e1e;
+}
+
+.btn.cancel:hover {
+  background: #d04646;
+}
+
+.btn.green {
+  background: #9A3F3F;
+  color: #fff;
+}
+
+.btn.green:hover {
+  background: #538d58;
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* === MEDICINE DISPENSE SECTION === */
+.medicine-section {
+  margin-top: 15px;
+}
+
+.medicine-section label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #4a3c3c;
+}
+
+/* Container that holds all medicine rows */
+#medicine-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual medicine row */
+.medicine-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #9a3f3f;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.medicine-row:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Dropdown & input */
+.medicine-row select,
+.medicine-row input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 2px solid #b45f5f;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  color: #3a2f2f;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.medicine-row select:focus,
+.medicine-row input:focus {
+  border-color: #9a3f3f;
+  box-shadow: 0 0 5px rgba(154, 63, 63, 0.3);
+}
+
+/* Quantity input narrower */
+.medicine-row input[type="number"] {
+  width: 120px;
+}
+
+/* Remove button (✖) */
+.remove-btn {
+  background: #d04b4b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #9a3f3f;
+  transform: scale(1.1);
+}
+
+/* Add Medicine Button */
+#addMedicineBtn {
+  margin-top: 10px;
+  background: #9a3f3f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .medicine-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .remove-btn {
+    align-self: flex-end;
+  }
+}

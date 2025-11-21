@@ -1,0 +1,22 @@
+{
+    "Paracetamol": {
+        "next_month_pred": 0,
+        "quarter_avg_pred": 0
+    },
+    "Amoxicillin": {
+        "next_month_pred": 0,
+        "quarter_avg_pred": 0
+    },
+    "Cough Syrup": {
+        "next_month_pred": 10.67,
+        "quarter_avg_pred": 6.2
+    },
+    "Multivitamin": {
+        "next_month_pred": 10.67,
+        "quarter_avg_pred": 6.2
+    },
+    "Loperamide": {
+        "next_month_pred": 0,
+        "quarter_avg_pred": 0
+    }
+}

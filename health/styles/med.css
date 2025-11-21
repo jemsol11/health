@@ -1,0 +1,478 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9A3F3F;
+  padding: 15px 30px;
+  border-bottom: 5px solid #b45f5f;
+}
+
+.logo {
+  font-weight: bold;
+  font-size:20px;
+  color: #E6CFA9;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #f4f4d7;
+  border-radius:5px;
+  font-weight: bold;
+}
+
+.navbar nav ul li a.active {
+  color: #9a3f3f;
+  background: #f2ebe0;
+  border-radius: 30px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+
+  color: #3E0703; /* change text color */
+  transition: 0.3s ease; /* smooth effect */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #faf7f1;
+  padding: 8px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgb(134 73 73 / 10%);
+  font-family: Arial, sans-serif;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.user-info:hover {
+  background: #f6dede;
+  transform: scale(1.02);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #9A3F3F; /* matches your barangay theme */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.user-info span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+  .user-info {
+    padding: 6px 10px;
+    gap: 8px;
+  }
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .user-info span {
+    font-size: 14px;
+  }
+}
+.logout-btn {
+  background-color: #e53939;  /* Deep red to match your barangay system theme */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:hover {
+  background-color: #762b2b; /* Lighter red on hover */
+  transform: scale(1.05);
+}
+
+.logout-btn:active {
+  background-color: #7d2d2d;
+  transform: scale(0.98);
+}
+
+/* Page Content */
+.content {
+  padding: 24px;
+}
+
+/* Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-header h2 {
+  margin: 0;
+}
+.page-header p {
+  margin: 4px 0 0;
+  color: #666;
+}
+.btn-primary {
+  background: #27ae60;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: #1e874b;
+}
+
+/* Cards */
+.summary-cards {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  flex: 1;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #666;
+}
+.card p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Forecast */
+.inventory-forecast {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.forecast-chart {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  border: 1px dashed #ccc;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* Controls */
+.table-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.table-controls input,
+.table-controls select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #150f0f;
+}
+.btn-secondary {
+  background: #7c7bc3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background: #217dbb;
+}
+
+/* Table */
+.table-container {
+  background: #e4bfbf;
+  border-radius: 8px;
+  padding: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+thead {
+  background: #f4f6f9;
+}
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+/* Page Layout */
+.content {
+  padding: 20px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.header-section {
+  margin-bottom: 20px;
+}
+
+.header-section h2 {
+  color: #2c3e50;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  
+}
+
+.card {
+  flex: 1;
+  background: #492424;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+  
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #464141;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #212724;
+  
+}
+.card {
+  background: #E6D8C3;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: all 0.3s ease; /* smooth animation */
+  cursor: pointer;
+}
+.card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: #C2A68C;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Tabs Layout --- */
+.tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ccc;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* --- Tab Buttons --- */
+.tab {
+  flex: 1; /* Equal width per tab */
+  text-align: center;
+  padding: 14px 0;
+  background: #9A3F3F;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px 6px 0 0;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+/* Hover effect (warm burgundy tone) */
+.tab:hover {
+  background: #B75742;
+  transform: translateY(-2px);
+}
+
+/* Active tab (cream + burgundy) */
+.tab.active {
+  background: #E6CFA9;
+  color: #3E0703;
+  border-bottom: 3px solid #9A3F3F;
+  transform: none;
+}
+
+/* --- Tab Content --- */
+.tab-panel {
+  display: none;
+  width: 100%;
+  background: #f0e9e9;
+  border: solid 3px #9a3f3f;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  padding: 25px;
+}
+
+.tab-panel.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* --- Animation --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- Form Styling --- */
+.form-group {
+  margin-bottom:28px;
+}
+
+.form-group label {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #0c0909;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #463a3a;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4c946b;
+  box-shadow: 0 0 4px rgba(39,174,96,0.4);
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #b42f2f;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #b45454;
+}
+
+.btn-secondary {
+  background: #3498db;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #2e86c1;
+}
+
+/* --- Table Styling --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+  background: #c2b6b6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #693434;
+  color: white;
+  font-weight: 600;
+}
+
+tr:hover {
+  background: #d7c688;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 8px 10px;
+  border: 2px solid #463a3a;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.report-section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}

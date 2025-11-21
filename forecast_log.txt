@@ -1,0 +1,100 @@
+The system cannot find the file C:\Python312\python.exe.
+2025-10-17 15:24:43 — CMD: start /B "" "C:\Python312\python.exe" "C:\xampp\htdocs\health\forecast.py"
+Return Code: 1
+Output:
+
+
+2025-10-17 15:34:29 — CMD: "python" "C:\xampp\htdocs\health\forecast.py" 2>&1
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+
+2025-10-17 15:34:30 — CMD: "py" "C:\xampp\htdocs\health\forecast.py" 2>&1
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+
+2025-10-17 15:34:30 — CMD: "C:\Users\Laptop Supplier PH\AppData\Local\Programs\Python\Python312\python.exe" "C:\xampp\htdocs\health\forecast.py" 2>&1
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+The system cannot find the path specified.
+
+2025-10-17 15:34:30 — CMD: "C:\Program Files\Python312\python.exe" "C:\xampp\htdocs\health\forecast.py" 2>&1
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+The system cannot find the path specified.
+The system cannot find the path specified.
+
+2025-10-17 15:34:30 — CMD: "C:\Program Files\Python311\python.exe" "C:\xampp\htdocs\health\forecast.py" 2>&1
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+
+2025-10-17 15:34:30 — CMD: "C:\Program Files\Python310\python.exe" "C:\xampp\htdocs\health\forecast.py" 2>&1
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+
+2025-10-17 15:34:30 — CMD: "C:\Python312\python.exe" "C:\xampp\htdocs\health\forecast.py" 2>&1
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\health\forecast.py", line 2, in <module>
+    import mysql.connector
+ModuleNotFoundError: No module named 'mysql'
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+
+=== Forecast Triggered by: rep.php ===
+2025-10-17 15:34:30 — Result: Failed
+
+2025-10-23 11:19:03 — CMD: "python" "C:\xampp\htdocs\health\forecast.py" 2>&1
+The system cannot find the path specified.
+The system cannot find the path specified.
+The system cannot find the path specified.
+C:\xampp\htdocs\health\forecast.py:37: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+C:\xampp\htdocs\health\forecast.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  meds_df = pd.read_sql("SELECT med_name FROM medicines", conn)
+File write error: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
