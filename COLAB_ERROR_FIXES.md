@@ -126,6 +126,11 @@ Processing 974 records...
 | Cell 7 | `TypeError: unsupported operand type(s) for /: 'str' and 'int'` | ✅ **FIXED** |
 | Cell 8 | `KeyError: "['holiday_ratio', 'med_encoded'] not in index"` | ✅ **FIXED** |
 
+### Round 3 Errors - NaN Values in Training Data:
+| Cell | Error Before | Status Now |
+|------|-------------|------------|
+| Cell 8 | `ValueError: Input X contains NaN. GradientBoostingRegressor does not accept missing values` | ✅ **FIXED** |
+
 ---
 
 ## 🔧 Additional Fixes Applied (Round 2)
@@ -171,6 +176,35 @@ monthly_df['med_encoded'] = monthly_df['med_name'].map(med_mapping).astype(float
 ```
 
 **Why?** Ensures all numeric operations work correctly without type errors.
+
+---
+
+## 🔧 Additional Fixes Applied (Round 3)
+
+### Cell 8 - Train Gradient Boosting Models
+**Fixed NaN handling in training data:**
+```python
+# OLD CODE - Only checked 3 lag features
+med_data_clean = med_data.dropna(subset=['lag_1', 'lag_2', 'lag_3'])
+
+# NEW CODE - Check ALL feature columns for NaN
+med_data_clean = med_data.dropna(subset=feature_cols)  # All 19 features!
+
+# ... prepare data ...
+
+# Double-check for any remaining NaN values
+if np.isnan(X).any():
+    skipped += 1
+    print(f"   ⏭️  Skipped {med} (contains NaN values after cleaning)")
+    continue
+```
+
+**Why?**
+- GradientBoostingRegressor doesn't accept NaN values
+- `lag_6`, `lag_12`, and rolling features could still have NaN even after dropping lag_1, lag_2, lag_3
+- Need to check ALL 19 features for NaN before training
+
+**Result:** Clean training data with zero NaN values
 
 ---
 
