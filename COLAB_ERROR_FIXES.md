@@ -110,6 +110,7 @@ Processing 974 records...
 
 ## ✅ All Errors Resolved
 
+### Round 1 Errors - CSV Corruption:
 | Cell | Error Before | Status Now |
 |------|-------------|------------|
 | Cell 5 | `ValueError: time data "(29" doesn't match format` | ✅ **FIXED** |
@@ -117,6 +118,59 @@ Processing 974 records...
 | Cell 7 | `NameError: name 'monthly_df' is not defined` | ✅ **FIXED** |
 | Cell 8 | `NameError: name 'all_medicines' is not defined` | ✅ **FIXED** |
 | Cell 10 | `IndexError: list index out of range` | ✅ **FIXED** |
+
+### Round 2 Errors - Data Type Issues:
+| Cell | Error Before | Status Now |
+|------|-------------|------------|
+| Cell 5 | `ValueError: Unknown format code 'f' for object of type 'str'` | ✅ **FIXED** |
+| Cell 7 | `TypeError: unsupported operand type(s) for /: 'str' and 'int'` | ✅ **FIXED** |
+| Cell 8 | `KeyError: "['holiday_ratio', 'med_encoded'] not in index"` | ✅ **FIXED** |
+
+---
+
+## 🔧 Additional Fixes Applied (Round 2)
+
+### Cell 4 - Load and Explore Data
+**Added explicit numeric type conversion:**
+```python
+# Convert numeric columns to proper types
+numeric_cols = ['patient_id', 'med_id', 'quantity_given', 'is_national_holiday', 'records_per_day']
+for col in numeric_cols:
+    df_raw[col] = pd.to_numeric(df_raw[col], errors='coerce')
+
+# Remove rows with invalid numeric data
+df_raw = df_raw.dropna(subset=['quantity_given'])
+```
+
+**Why?** CSV columns were being read as strings instead of numbers.
+
+### Cell 5 - Visualize Data
+**Added float conversion for printing:**
+```python
+# Convert to float explicitly for formatting
+total_qty = float(med_totals.iloc[0])
+print(f"📊 Top medicine: {top_med} with {total_qty:.0f} total units dispensed")
+```
+
+**Why?** Prevents `ValueError: Unknown format code 'f' for object of type 'str'`
+
+### Cell 7 - Feature Engineering
+**Added type safety for holiday calculations:**
+```python
+# Ensure numeric type before aggregation
+df['is_national_holiday'] = pd.to_numeric(df['is_national_holiday'], errors='coerce').fillna(0)
+
+# ... aggregation code ...
+
+monthly_df['total_holidays'] = monthly_df['total_holidays'].fillna(0).astype(float)
+monthly_df['days_in_month'] = monthly_df['days_in_month'].astype(float)
+monthly_df['holiday_ratio'] = monthly_df['total_holidays'] / monthly_df['days_in_month']
+
+# Medicine encoding as float
+monthly_df['med_encoded'] = monthly_df['med_name'].map(med_mapping).astype(float)
+```
+
+**Why?** Ensures all numeric operations work correctly without type errors.
 
 ---
 
